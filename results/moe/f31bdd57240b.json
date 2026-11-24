@@ -1,0 +1,81 @@
+{
+ "hash": "f31bdd57240b",
+ "schema_version": 1,
+ "config": {
+  "schema_version": 1,
+  "study": "moe",
+  "phase": "stage_b",
+  "arch": "moe",
+  "width": null,
+  "optimizer": "lionmuon",
+  "rule": "moonlight",
+  "lr": 0.016,
+  "wd": 0.0,
+  "momentum": null,
+  "adamw_betas": [
+   0.9,
+   0.95
+  ],
+  "adamw_eps": 1e-08,
+  "adamw_group_lr": 0.004,
+  "adamw_group_wd": 0.0,
+  "ns_steps": 5,
+  "ns_dtype": "fp32",
+  "manifold": null,
+  "init_projection": false,
+  "seed": 0,
+  "budget_multiplier": 1.0,
+  "branch": null,
+  "budget_base_steps": 2441,
+  "budget_unit": "tokens",
+  "batch": 32,
+  "seq_len": 256,
+  "grad_clip": 1.0,
+  "schedule": {
+   "kind": "wsd",
+   "warmup_frac_of_1x": 0.05,
+   "decay_frac": 0.2
+  },
+  "precision": "fp32",
+  "router_aux_loss_coef": 0.01,
+  "eval": {
+   "every_steps": 100,
+   "val_small_tokens": 500000,
+   "val_final": "full"
+  },
+  "data": {
+   "dataset": "fineweb_edu",
+   "version": "fineweb-edu-10bt-v1-5d037df91d97"
+  },
+  "lionmuon": {
+   "period": 5,
+   "alpha": 30.0,
+   "beta1": 0.9,
+   "beta2": 0.95
+  }
+ },
+ "status": "completed",
+ "diverged_at_step": null,
+ "final_val_loss": 3.8007042884091367,
+ "final_val_acc": null,
+ "final_test_loss": null,
+ "final_test_acc": null,
+ "train_val_gap": 0.05314915664396391,
+ "flops": {
+  "model": 253382470139904,
+  "optimizer": 5121472444160,
+  "total": 258503942584064
+ },
+ "dual_steps_mean": null,
+ "msign_calls_mean": null,
+ "edge_rule_fired": null,
+ "wall_clock_s": 777.7566931247711,
+ "started_at": "2026-11-23T23:41:35.552641+00:00",
+ "finished_at": "2026-11-23T23:54:33.309360+00:00",
+ "device": "cuda",
+ "hostname": "393e60516852",
+ "precision": "fp32",
+ "torch_version": "2.15.0+cu132",
+ "transformers_version": "4.57.6",
+ "git_commit": "3b3d3839760bd00d4955fd8f2182127ccfcbc863"
+}
